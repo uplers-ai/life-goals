@@ -1,0 +1,1204 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Life Goals 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one column, season strip on top, sticky tab bar, quest cards grouped by category. Sibling of the Thank you Board. */
+:root{
+  --paper:#F3F4F0; --card:#FFFFFF; --card-2:#F8F9F6;
+  --ink:#191B18; --ink-2:#575B54; --ink-3:#878B82;
+  --line:#DFE2DA; --line-2:#C9CDC2;
+  --accent:#1E6E55; --accent-soft:#DDEFE7; --accent-ring:rgba(30,110,85,.22);
+  --health:#2F7D5B; --health-soft:#E0F0E7;
+  --exp:#2C64A6;    --exp-soft:#E1EBF7;
+  --learn:#7046A8;  --learn-soft:#ECE4F6;
+  --stretch:#B0620E;--stretch-soft:#F8E9D6;
+  --warn:#A3540C;
+  --shadow:0 1px 2px rgba(25,27,24,.05),0 8px 24px -14px rgba(25,27,24,.20);
+  --r-s:6px; --r-m:10px; --r-l:16px;
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#161816; --card:#202320; --card-2:#272A27;
+    --ink:#EEF0EA; --ink-2:#AAAFA5; --ink-3:#80857C;
+    --line:#333731; --line-2:#444940;
+    --accent:#5CC59E; --accent-soft:#1D3229; --accent-ring:rgba(92,197,158,.25);
+    --health:#6CC796; --health-soft:#1E3227;
+    --exp:#78A8E3; --exp-soft:#1C2939;
+    --learn:#B593E6; --learn-soft:#2B2338;
+    --stretch:#E7A55C; --stretch-soft:#382A1A;
+    --warn:#E3A35D;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -14px rgba(0,0,0,.6);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#161816; --card:#202320; --card-2:#272A27;
+  --ink:#EEF0EA; --ink-2:#AAAFA5; --ink-3:#80857C;
+  --line:#333731; --line-2:#444940;
+  --accent:#5CC59E; --accent-soft:#1D3229; --accent-ring:rgba(92,197,158,.25);
+  --health:#6CC796; --health-soft:#1E3227;
+  --exp:#78A8E3; --exp-soft:#1C2939;
+  --learn:#B593E6; --learn-soft:#2B2338;
+  --stretch:#E7A55C; --stretch-soft:#382A1A;
+  --warn:#E3A35D;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -14px rgba(0,0,0,.6);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 72px}
+h1,h2,h3{font-family:var(--display);margin:0;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+.eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.note{font-size:13px;color:var(--ink-3)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r-l);box-shadow:var(--shadow)}
+
+/* masthead */
+.mast{padding-block:32px 18px;display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between}
+.brand h1{font-size:32px;font-weight:800;line-height:1.02}
+.brand .tagline{font-size:16px;color:var(--ink-2);margin-top:6px;max-width:46ch}
+.brand .sub{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-top:6px}
+.whoami{display:flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 6px 5px 6px;box-shadow:var(--shadow)}
+.whoami .nm{font-weight:600;font-size:14px}
+.whoami button{background:var(--card-2);border:1px solid var(--line);border-radius:999px;padding:4px 11px;font-size:12px;color:var(--ink-2)}
+
+/* season strip */
+.season{padding:16px 18px 14px;display:flex;flex-direction:column;gap:10px}
+.season-top{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;justify-content:space-between}
+.season-top .big{font-family:var(--display);font-size:20px;font-weight:800}
+.months{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:3px}
+.mseg.gone{background:transparent;border-style:dashed;opacity:.55}
+.mseg.gone span{color:var(--ink-3)}
+.mseg.live{border-color:var(--accent)}
+.mseg.live span{color:var(--accent);font-weight:600}
+@media (max-width:520px){.mseg span{font-size:9.5px}}
+.mseg{position:relative;height:30px;border-radius:5px;background:var(--card-2);border:1px solid var(--line);overflow:hidden}
+.mseg .fill{position:absolute;inset:0 auto 0 0;background:var(--accent-soft)}
+.mseg span{position:relative;display:block;text-align:center;line-height:28px;font-family:var(--mono);font-size:11.5px;color:var(--ink-2)}
+.mseg.past span{color:var(--accent);font-weight:600}
+
+/* tabs */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);padding-block:12px;margin-top:14px;border-bottom:1px solid var(--line)}
+.tabs{display:inline-flex;flex-wrap:wrap;gap:2px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px;box-shadow:var(--shadow);max-width:100%}
+.tabs button{border:0;background:transparent;border-radius:999px;padding:7px 14px;font-size:13.5px;font-weight:500;color:var(--ink-2);white-space:nowrap}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+.section{padding-block:26px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.section-head h2{font-size:22px;font-weight:800}
+
+/* avatar */
+.av{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--mono);font-size:11px;font-weight:600;color:#fff;text-shadow:0 1px 1px rgba(0,0,0,.2)}
+.av.sm{width:24px;height:24px;font-size:9.5px}
+.av.lg{width:40px;height:40px;font-size:14px}
+
+/* gate */
+.gate{margin-top:20px;padding:30px 26px}
+.gate h2{font-size:26px;font-weight:800;margin-bottom:6px}
+.gate p{color:var(--ink-2);max-width:60ch;margin-bottom:20px}
+.namegrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px}
+.namegrid button{background:var(--card-2);border:1px solid var(--line);border-radius:var(--r-m);padding:11px 13px;text-align:left;font-weight:500;display:flex;align-items:center;gap:10px}
+.namegrid button:hover{border-color:var(--accent);background:var(--accent-soft)}
+
+/* category chip */
+.cat{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:3px 9px;white-space:nowrap}
+.cat::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.c-health{color:var(--health);background:var(--health-soft)}
+.c-exp{color:var(--exp);background:var(--exp-soft)}
+.c-learn{color:var(--learn);background:var(--learn-soft)}
+.c-stretch{color:var(--stretch);background:var(--stretch-soft)}
+
+/* board */
+.group{display:flex;flex-direction:column;gap:12px;margin-bottom:26px}
+.group-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.group-head .gn{font-family:var(--display);font-size:18px;font-weight:800}
+.group-head .gc{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+.quests{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.quest{background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);padding:15px;display:flex;flex-direction:column;gap:11px;min-width:0}
+.quest.mine{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-ring)}
+.q-top{display:flex;gap:10px;align-items:center}
+.q-who{font-weight:600;font-size:14.5px;line-height:1.2}
+.q-buddy{font-size:12px;color:var(--ink-3)}
+.q-title{font-family:var(--display);font-size:17px;font-weight:600;line-height:1.25;overflow-wrap:anywhere}
+.q-why{font-size:13.5px;color:var(--ink-2);overflow-wrap:anywhere}
+.meter{display:flex;flex-direction:column;gap:5px}
+.track{height:8px;border-radius:99px;background:var(--card-2);border:1px solid var(--line);overflow:hidden;position:relative}
+.track .f{position:absolute;inset:0 auto 0 0;border-radius:99px}
+.track .pace{position:absolute;top:-2px;bottom:-2px;width:2px;background:var(--ink-3);opacity:.6}
+.meter-row{display:flex;justify-content:space-between;gap:8px;font-family:var(--mono);font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.meter-row b{color:var(--ink);font-weight:600}
+.weeks{display:grid;grid-template-columns:repeat(8,1fr);gap:4px}
+.wk{height:12px;border-radius:2px;background:var(--card-2);border:1px solid var(--line)}
+.wk.on{border:0}
+.wk.future{opacity:.35}
+.q-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.cheer{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line-2);background:var(--card-2);border-radius:999px;padding:5px 12px;font-size:13px;color:var(--ink-2)}
+.cheer:hover:not(:disabled){border-color:var(--accent);color:var(--accent)}
+.cheer.done{background:var(--accent-soft);border-color:transparent;color:var(--accent);cursor:default}
+.cheer .n{font-family:var(--mono);font-weight:600;font-variant-numeric:tabular-nums}
+.last{font-size:12.5px;color:var(--ink-3);overflow-wrap:anywhere}
+.waiting{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px 10px 3px 3px;font-size:13px}
+.empty{padding:26px;text-align:left;display:flex;flex-direction:column;gap:10px}
+.empty h3{font-size:19px}
+
+/* forms */
+.form{padding:22px;display:flex;flex-direction:column;gap:18px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label,.lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.field input,.field select,.field textarea{width:100%;padding:10px 11px;border-radius:var(--r-s);border:1px solid var(--line-2);background:var(--card-2);font-size:14.5px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);background:var(--card);outline:none}
+.field textarea{min-height:64px;resize:vertical}
+.field .hint{font-size:12.5px;color:var(--ink-3)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.row3{display:grid;grid-template-columns:120px 1fr;gap:12px}
+@media (max-width:560px){.row2,.row3{grid-template-columns:1fr}}
+.catpick{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}
+.catopt{border:1.5px solid var(--line);background:var(--card-2);border-radius:var(--r-m);padding:12px 13px;text-align:left;display:flex;flex-direction:column;gap:6px}
+.catopt .cn{font-weight:600;font-size:15px}
+.catopt .cd{font-size:12.5px;color:var(--ink-2);line-height:1.45}
+.catopt[aria-pressed="true"]{border-color:var(--ink);background:var(--card)}
+.ideas{display:flex;flex-wrap:wrap;gap:6px}
+.idea{border:1px dashed var(--line-2);background:transparent;border-radius:999px;padding:4px 11px;font-size:12.5px;color:var(--ink-2)}
+.idea:hover{border-style:solid;border-color:var(--accent);color:var(--accent)}
+.btn{border:1px solid var(--accent);background:var(--accent);color:#fff;border-radius:var(--r-s);padding:9px 16px;font-weight:600;font-size:14px}
+:root[data-theme="dark"] .btn{color:#0f1a15}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn{color:#0f1a15}}
+.btn:disabled{background:var(--card-2);border-color:var(--line);color:var(--ink-3);cursor:not-allowed}
+.ghost{background:var(--card-2);border:1px solid var(--line);border-radius:var(--r-s);padding:8px 13px;font-size:13px;color:var(--ink-2)}
+.actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.msg{font-size:13px;color:var(--ink-2)}
+.msg.err{color:var(--warn)}
+
+/* my quest */
+.mine-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:14px;align-items:start}
+@media (max-width:820px){.mine-grid{grid-template-columns:1fr}}
+.log-list{display:flex;flex-direction:column}
+.log{display:grid;grid-template-columns:70px 1fr auto;gap:10px;padding:10px 2px;border-top:1px solid var(--line);align-items:baseline}
+.log:first-child{border-top:0}
+.log .d{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+.log .a{font-family:var(--mono);font-weight:600;font-variant-numeric:tabular-nums}
+.log .t{font-size:13.5px;color:var(--ink-2);overflow-wrap:anywhere;min-width:0}
+.linkbtn{background:none;border:0;padding:0;font-size:12px;color:var(--ink-3);text-decoration:underline;text-underline-offset:2px}
+.linkbtn:hover{color:var(--warn)}
+.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.stat{background:var(--card-2);border:1px solid var(--line);border-radius:var(--r-m);padding:10px 12px}
+.stat .k{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.stat .v{font-family:var(--display);font-size:22px;font-weight:800;font-variant-numeric:tabular-nums}
+
+/* standings */
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:500;text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:middle}
+td.num,th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+.who{display:flex;align-items:center;gap:9px}
+.tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:2px 7px;white-space:nowrap}
+.tag.fin{color:var(--accent);background:var(--accent-soft)}
+.tag.host{color:var(--ink-2);border:1px solid var(--line-2)}
+.buddies{display:flex;flex-wrap:wrap;gap:6px}
+.bchip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--card-2);border-radius:999px;padding:3px 11px 3px 3px;font-size:13px;color:var(--ink-2)}
+.bchip:hover{border-color:var(--accent)}
+.bchip[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft);color:var(--accent);font-weight:600}
+.bchip.none{padding:5px 11px}
+.q-buddy .linkbtn{font-size:12px;color:var(--accent)}
+.q-buddy select{font-size:12px;padding:2px 4px;border-radius:5px;border:1px solid var(--line-2);background:var(--card-2);max-width:170px}
+.prize{font-family:var(--display);font-size:24px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.1}
+.people{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);padding:15px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.pcard.me{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-ring)}
+.pcard .pn{font-weight:600;font-size:15px}
+.pcard .pa{font-size:13.5px;color:var(--ink-2);overflow-wrap:anywhere}
+.skills{display:flex;flex-wrap:wrap;gap:6px}
+.skill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 10px;font-size:13px;overflow-wrap:anywhere}
+.skill::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;flex:none}
+.skill .x{border:0;background:none;padding:0 0 0 2px;color:inherit;opacity:.6;font-size:14px;line-height:1}
+.skill .x:hover{opacity:1}
+.skill.hit{box-shadow:0 0 0 2px currentColor}
+.addskill{display:flex;gap:8px;flex-wrap:wrap}
+.addskill input,.addskill select,.pfield{padding:8px 10px;border-radius:var(--r-s);border:1px solid var(--line-2);background:var(--card-2);font-size:14px;min-width:0}
+.addskill input{flex:1 1 180px}
+.pfield{width:100%}
+.filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.filters input{flex:1 1 220px;max-width:340px;padding:9px 12px;border-radius:999px;border:1px solid var(--line-2);background:var(--card);font-size:14px}
+.bchip .bk{font-size:11.5px;color:var(--accent);font-weight:500}
+.composer{padding:18px;display:flex;flex-direction:column;gap:12px;margin-bottom:18px}
+.drop{border:1.5px dashed var(--line-2);border-radius:var(--r-m);padding:18px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;background:var(--card-2);cursor:pointer}
+.drop:hover,.drop.over{border-color:var(--accent);background:var(--accent-soft)}
+.drop b{font-family:var(--display);font-size:16px}
+.preview{max-width:100%;max-height:280px;border-radius:var(--r-s);display:block}
+.wall{columns:3 260px;column-gap:12px}
+.post{break-inside:avoid;background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);margin-bottom:12px;overflow:hidden;display:flex;flex-direction:column}
+.post .media{background:var(--card-2);display:block;width:100%;max-height:520px;object-fit:cover}
+.post video.media{object-fit:contain;background:#000}
+.post .missing{padding:30px 14px;text-align:center;font-size:13px;color:var(--ink-3);background:var(--card-2)}
+.post .pb{padding:12px 13px 13px;display:flex;flex-direction:column;gap:8px}
+.post .cap{font-size:14px;overflow-wrap:anywhere}
+.post .pmeta{display:flex;align-items:center;gap:8px;font-size:13px}
+.post .pmeta .when{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--ink-3)}
+.post .qt{font-size:12.5px;color:var(--ink-2);overflow-wrap:anywhere}
+.post .pf{display:flex;align-items:center;gap:10px;justify-content:space-between;flex-wrap:wrap}
+.like{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line-2);background:var(--card-2);border-radius:999px;padding:5px 12px;font-size:13px;color:var(--ink-2)}
+.like:hover{border-color:#C8424F;color:#C8424F}
+.like.on{background:#FBE6E8;border-color:transparent;color:#B83240}
+:root[data-theme="dark"] .like.on{background:#3A1E22;color:#F08A95}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .like.on{background:#3A1E22;color:#F08A95}}
+.like svg{width:15px;height:15px}
+.like .n{font-family:var(--mono);font-weight:600;font-variant-numeric:tabular-nums}
+.likers{font-size:12px;color:var(--ink-3);overflow-wrap:anywhere}
+.progressbar{height:4px;border-radius:99px;background:var(--line);overflow:hidden}
+.progressbar span{display:block;height:100%;background:var(--accent);width:40%;animation:slide 1.1s ease-in-out infinite alternate}
+@keyframes slide{from{margin-left:0}to{margin-left:60%}}
+.rewards{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px;margin-bottom:22px}
+.reward{padding:22px 20px 20px;display:flex;flex-direction:column;gap:10px}
+.reward.big{border-color:var(--accent);background:linear-gradient(180deg,var(--accent-soft),var(--card) 70%)}
+.reward .amt{font-family:var(--display);font-size:38px;font-weight:800;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.reward.big .amt{color:var(--accent)}
+.reward h3{font-size:18px}
+.reward p{font-size:14px;color:var(--ink-2)}
+.reward ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--ink-2);display:flex;flex-direction:column;gap:4px}
+.champs{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:18px}
+.champ{background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);padding:13px 14px;display:flex;flex-direction:column;gap:9px}
+.champ .cw{display:flex;align-items:center;gap:9px;font-weight:600}
+.champ .cs{margin-left:auto;font-family:var(--mono);font-size:15px;font-weight:600}
+
+/* rules */
+.rules{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.rule{padding:18px 18px 16px;display:flex;flex-direction:column;gap:9px}
+.rule h3{font-size:17px}
+.rule ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:14px;display:flex;flex-direction:column;gap:5px}
+.formula{font-family:var(--mono);font-size:13px;background:var(--card-2);border:1px solid var(--line);border-radius:var(--r-s);padding:10px 12px;line-height:1.7}
+.timeline{display:flex;flex-direction:column}
+.tl{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:8px 0;border-top:1px solid var(--line);font-size:14px}
+.tl:first-child{border-top:0}
+.tl .when{font-family:var(--mono);font-size:12px;color:var(--accent);font-weight:600;padding-top:2px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:9px 16px;border-radius:999px;font-size:13.5px;z-index:40;box-shadow:var(--shadow)}
+.status{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);letter-spacing:.06em}
+
+/* v2 additions */
+.seg{display:inline-flex;gap:2px;background:var(--card-2);border:1px solid var(--line);border-radius:999px;padding:3px;flex-wrap:wrap}
+.seg button{border:0;background:transparent;border-radius:999px;padding:6px 13px;font-size:13px;color:var(--ink-2)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.steps{display:flex;flex-direction:column;gap:6px}
+.step{display:flex;align-items:center;gap:9px;font-size:14px;overflow-wrap:anywhere}
+.step input{width:17px;height:17px;accent-color:var(--accent);flex:none}
+.step.done span{color:var(--ink-3);text-decoration:line-through}
+.steps.ro .step::before{content:"";flex:none;width:12px;height:12px;border-radius:3px;border:1.5px solid var(--line-2)}
+.steps.ro .step.done::before{background:var(--accent);border-color:var(--accent)}
+.q-quick{display:flex;flex-direction:column;gap:9px;border-top:1px solid var(--line);padding-top:12px}
+.q-quick .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.q-quick input[type=number]{width:84px}
+.q-quick input[type=date]{width:150px}
+.q-quick input[type=text]{flex:1 1 160px;min-width:0}
+.q-quick input{padding:8px 10px;border-radius:var(--r-s);border:1px solid var(--line-2);background:var(--card-2);font-size:14px}
+.q-quick input:focus{border-color:var(--accent);outline:none;background:var(--card)}
+.q-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hist summary{cursor:pointer;font-size:13px;color:var(--ink-2)}
+.sugg-intro{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;margin-bottom:26px}
+.tip{padding:14px 15px;display:flex;flex-direction:column;gap:5px}
+.tip b{font-family:var(--display);font-size:15.5px}
+.tip span{font-size:13.5px;color:var(--ink-2)}
+.sugg{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.sg{background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);padding:14px;display:flex;flex-direction:column;gap:8px}
+.sg .st{font-family:var(--display);font-size:16px;font-weight:600;line-height:1.25}
+.sg .sm{font-family:var(--mono);font-size:11.5px;color:var(--ink-3)}
+.sg .sd{font-size:13.5px;color:var(--ink-2);flex:1}
+.sg button{align-self:flex-start}
+.sg ol{margin:0;padding-left:18px;font-size:12.5px;color:var(--ink-2)}
+</style>
+<script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-storage-compat.js"></script>
+<script src="firebase-config.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="mast">
+    <div class="brand">
+      <h1>Life Goals 2026</h1>
+      <p class="tagline">We set business goals every quarter. This one's for life.</p>
+      <div class="sub">2 Nov → 31 Dec 2026 · Marketing</div>
+    </div>
+    <div class="whoami" id="whoami" hidden>
+      <span class="av sm" id="me-av"></span><span class="nm" id="me-nm"></span>
+      <button type="button" id="switch">Not you?</button>
+    </div>
+  </header>
+
+  <section class="panel season" aria-label="Season timeline">
+    <div class="season-top">
+      <div class="big" id="season-big">Starts 2 November</div>
+      <div class="note" id="season-note"></div>
+    </div>
+    <div class="months" id="months"></div>
+  </section>
+
+  <section class="panel gate" id="gate" hidden>
+    <h2>Who's playing?</h2>
+    <p>Pick your name to add quests, log progress and cheer people on. It's remembered on this device.</p>
+    <div class="namegrid" id="namegrid"></div>
+  </section>
+
+  <div id="app" hidden>
+    <nav class="bar">
+      <div class="tabs" role="tablist" id="tabs">
+        <button type="button" role="tab" data-tab="board" aria-selected="true">Board</button>
+        <button type="button" role="tab" data-tab="wall" aria-selected="false">Wall</button>
+        <button type="button" role="tab" data-tab="mine" aria-selected="false">My quests</button>
+        <button type="button" role="tab" data-tab="ideas" aria-selected="false">Suggestions</button>
+        <button type="button" role="tab" data-tab="people" aria-selected="false">People</button>
+        <button type="button" role="tab" data-tab="rewards" aria-selected="false">Rewards</button>
+        <button type="button" role="tab" data-tab="rules" aria-selected="false">How it works</button>
+      </div>
+    </nav>
+    <section class="section" id="view-board"></section>
+    <section class="section" id="view-wall" hidden></section>
+    <section class="section" id="view-mine" hidden></section>
+    <section class="section" id="view-ideas" hidden></section>
+    <section class="section" id="view-people" hidden></section>
+    <section class="section" id="view-rewards" hidden></section>
+    <section class="section" id="view-rules" hidden></section>
+    <div class="status" id="status"></div>
+  </div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------- config ---------- */
+var SEASON_START = "2026-11-02";   // a Monday; weeks run Mon–Sun
+var SEASON_END   = "2026-12-31";   // 60 days
+var WEEKS = 8;                     // the last week also takes in 28–31 Dec
+var FINISH_WEEKS = 7;              // weekly quests finish at target in 7 of 8 weeks
+var TABS = ["board","wall","mine","ideas","people","rewards","rules"];
+var FINISHER_PRIZE = 5000, BUDDY_PRIZE = 5000, STORY_PRIZE = 20000;
+function inr(n){ return "\u20b9"+n.toLocaleString("en-IN"); }
+
+var MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"].map(function(m,i){ return {key:"2026-"+(i<9?"0":"")+(i+1),short:m,live:i>=10}; });
+
+var TYPES = {
+  weekly:{name:"Every week", hint:"A habit. You set how many times a week; hit it in 7 of the 8 weeks to finish."},
+  total: {name:"A total by 31 Dec", hint:"A number to reach by 31 December: km, books, lessons, dishes."},
+  steps: {name:"A checklist", hint:"A one-off with steps: a trip, a certification, a launch."}
+};
+
+var CATS = {
+  health:  {name:"Health",     cls:"c-health",  color:"var(--health)",  desc:"Body and mind, done consistently."},
+  exp:     {name:"Experience", cls:"c-exp",     color:"var(--exp)",     desc:"Firsts. Places, people, things you've never done."},
+  learn:   {name:"Learn",      cls:"c-learn",   color:"var(--learn)",   desc:"A language, an instrument, a craft, a certificate."},
+  stretch: {name:"Stretch",    cls:"c-stretch", color:"var(--stretch)", desc:"More at work, outside your current role."}
+};
+var CAT_ORDER = ["health","exp","learn","stretch"];
+
+/* Suggestions: [title, type, target, unit, note, steps?] */
+var IDEAS = {
+  health:[
+    ["Gym 4 times a week","weekly",4,"gym sessions","Strength, cardio, classes: any session of 45 minutes or more counts."],
+    ["Walk 30 minutes, 3 times a week","weekly",3,"walks","Easiest habit to start. After lunch or after dinner both work."],
+    ["10,000 steps, 5 days a week","weekly",5,"10K-step days","Your phone already counts these. Log the days you crossed 10K."],
+    ["Run 100 km before New Year","total",100,"km","About 12 km a week. Screenshot your runs for the Wall."],
+    ["Run your first 10K","steps",0,"","Eight weeks is enough to go from 5K to 10K.",["Run 5 km without stopping","Run 7 km","Run 9 km","Run 10 km"]],
+    ["Yoga 3 times a week","weekly",3,"sessions","Home or studio. 30 minutes minimum."],
+    ["Lights out by 11, 5 nights a week","weekly",5,"nights","Sleep is the habit that makes the other habits work."],
+    ["Learn to swim","steps",0,"","Many pools run adult batches in winter too.",["Join a beginner batch","Float without support","Swim one length","Swim 4 lengths non-stop"]],
+    ["No added sugar on weekdays","weekly",5,"days","Weekends free. Log the weekdays you stayed clean."]
+  ],
+  exp:[
+    ["Visit Korea before the year ends","steps",0,"","Seoul in December: winter markets, cafés, snow if you're lucky.",["Fix dates and budget","Apply for the visa","Book flights and stay","Plan the itinerary","Go"]],
+    ["Take a solo trip to a new city","steps",0,"","Two nights, alone, somewhere you've never been.",["Pick the city","Book travel and stay","Make a list of 5 things to do there","Go"]],
+    ["Do a winter Himalayan trek","steps",0,"","Kedarkantha and Brahmatal run beginner batches through December.",["Pick the trek and dates","Book with an operator","Train: 3 weeks of stair climbs","Complete the trek"]],
+    ["See the Rann in winter","steps",0,"","The white desert is at its best in Nov–Dec, a few hours from Ahmedabad.",["Pick a weekend","Book stay and permits","Go for the full-moon night"]],
+    ["Get a scuba certification","steps",0,"","Andamans and Netrani run open-water courses in season.",["Book the course","Finish the theory","Complete the pool sessions","Do the open-water dives"]],
+    ["Cook a dish from 10 countries","total",10,"dishes","Post a photo of each one on the Wall."],
+    ["Go to 2 live gigs alone","total",2,"gigs","Concerts, stand-up, theatre. The alone part is the quest."],
+    ["Volunteer 10 hours","total",10,"hours","NGOs, animal shelters, teaching, cleanups."],
+    ["Host 2 dinners for friends","total",2,"dinners","Cook the whole meal yourself."]
+  ],
+  learn:[
+    ["Learn Korean basics","steps",0,"","Read Hangul first; everything gets easier after that.",["Read and write Hangul","Finish 30 app lessons","Introduce yourself in Korean","Post a video of it on the Wall"]],
+    ["Korean lessons, 4 days a week","weekly",4,"lesson days","Duolingo or Talk To Me In Korean, 15 minutes a day."],
+    ["Read 6 books","total",6,"books","One every 10 days. Audiobooks count."],
+    ["Play 3 songs on the guitar","total",3,"songs","Start with four-chord songs and work up."],
+    ["Practise an instrument 4 times a week","weekly",4,"sessions","20 minutes minimum, any instrument."],
+    ["Hold a 3-minute conversation in Spanish","steps",0,"","Eight weeks of daily practice gets most people there.",["Learn greetings and numbers","Finish 30 lessons","Talk with a native speaker online","Record your 3 minutes"]],
+    ["Learn to drive","steps",0,"","Two months of regular classes is enough for city driving.",["Get a learner's licence","Finish 15 driving classes","Drive in city traffic","Pass the driving test"]],
+    ["Reach a 1000 chess rating","steps",0,"","On chess.com or lichess.",["Play 30 rated games","Reach 850","Reach 925","Reach 1000"]],
+    ["Sketch 3 times a week","weekly",3,"sketches","A notebook and a pen. Post one a week on the Wall."]
+  ],
+  stretch:[
+    ["Own a new channel end to end","steps",0,"","A channel nobody on the team owns yet. Agree the scope with Aayush first.",["Agree the scope and goal","Launch the first campaign","Report the first month's numbers","Write a one-page playbook"]],
+    ["Mentor a junior teammate","total",8,"sessions","Weekly 30-minute sessions. They pick the topics."],
+    ["Run 2 AI workshops for the company","total",2,"workshops","Teach other teams one tool or workflow you use every day."],
+    ["Build an automation that saves the team 2 hours a week","steps",0,"","Something people will actually use every week.",["Pick the task with the team","Build a working version","Get 3 people using it","Measure the time saved"]],
+    ["Speak at an external event","steps",0,"","Meetups, college talks, panels, podcasts.",["Pick the event","Pitch your talk","Prepare and rehearse","Give the talk"]],
+    ["Publish 8 LinkedIn posts in my own voice","total",8,"posts","One a week about your work and what you're learning."],
+    ["Shadow 10 sales calls","total",10,"calls","See the customer up close. Bring back one insight per call."],
+    ["Get a professional certification","steps",0,"","Google Ads, HubSpot, GA4, a PM course. Pick one you'll use.",["Pick and enrol","Finish the coursework","Pass a mock test","Get certified"]]
+  ]
+};
+
+var ROSTER = [
+  {id:"aayush",name:"Aayush",hue:22,host:true},
+  {id:"shachi-dixit",name:"Shachi Dixit",hue:344},
+  {id:"sathvik-poojary",name:"Sathvik Poojary",hue:200},
+  {id:"kritika-verma",name:"Kritika Verma",hue:275},
+  {id:"aayushi-pandya",name:"Aayushi Pandya",hue:160},
+  {id:"ashima-jain",name:"Ashima Jain",hue:12},
+  {id:"priyanka-nair",name:"Priyanka Nair",hue:222},
+  {id:"krishna-chheta",name:"Krishna Chheta",hue:44},
+  {id:"bhumika-hasani",name:"Bhumika Hasani",hue:310},
+  {id:"jorrel-ribeiro",name:"Jorrel Ribeiro",hue:186},
+  {id:"chetan-chaand",name:"Chetan Chaand",hue:96},
+  {id:"ruhi-salhotra",name:"Ruhi Salhotra",hue:328},
+  {id:"manisha-virani",name:"Manisha Virani",hue:250},
+  {id:"sakshi-shah",name:"Sakshi Shah",hue:132}
+];
+var byId = {}; ROSTER.forEach(function(p){ byId[p.id]=p; });
+
+/* ---------- dates ---------- */
+function pad(n){ return (n<10?"0":"")+n; }
+function todayStr(){ var d=new Date(); return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()); }
+function dnum(s){ var p=s.split("-"); return Date.UTC(+p[0],+p[1]-1,+p[2])/86400000; }
+function fmtDate(s){ var p=s.split("-"); return (+p[2])+" "+["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][+p[1]-1]; }
+function weekOf(s){ return Math.min(WEEKS-1, Math.floor((dnum(s)-dnum(SEASON_START))/7)); }
+function seasonState(t){ if (dnum(t)<dnum(SEASON_START)) return "pre"; if (dnum(t)>dnum(SEASON_END)) return "over"; return "live"; }
+function weeksElapsed(t){ var st=seasonState(t); if (st==="pre") return 0; if (st==="over") return WEEKS; return weekOf(t)+1; }
+
+/* ---------- utils ---------- */
+function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];}); }
+function initials(n){ var p=n.split(" "); return (p[0][0]+(p[1]?p[1][0]:"")).toUpperCase(); }
+function av(p,size){ return '<span class="av '+(size||"")+'" style="background:hsl('+p.hue+' 45% 46%)">'+esc(initials(p.name))+'</span>'; }
+function fmtNum(n){ return (Math.round(n*10)/10).toLocaleString("en-IN"); }
+function first(p){ return p.name.split(" ")[0]; }
+function store(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v);}catch(e){ return null; } }
+var toastT;
+function toast(t){ var el=document.getElementById("toast"); el.textContent=t; el.hidden=false; clearTimeout(toastT); toastT=setTimeout(function(){el.hidden=true;},2400); }
+function val(id){ var e=document.getElementById(id); return e? e.value : ""; }
+
+/* ---------- firebase ---------- */
+/* Config lives in firebase-config.js. Without it the board runs in preview mode on this device only. */
+var FB=null;
+try{ if (window.firebase && window.FIREBASE_CONFIG && window.FIREBASE_CONFIG.apiKey) FB=firebase.initializeApp(window.FIREBASE_CONFIG); }catch(e){ FB=null; }
+
+/* Wall uploads go to Firebase Storage under wall/. */
+var Assets = FB ? {
+  upload:function(blob,kind){
+    var ext=((blob.type||"").split("/")[1]||(kind==="video"?"mp4":"jpg")).replace(/[^a-z0-9]/gi,"").slice(0,5);
+    var path="wall/"+S.me+"_"+Date.now()+"."+ext;
+    return FB.storage().ref(path).put(blob,{contentType:blob.type||(kind==="video"?"video/mp4":"image/jpeg")})
+      .then(function(snap){ return snap.ref.getDownloadURL(); })
+      .then(function(url){ return {id:path,url:url}; })
+      ["catch"](function(e){
+        var c=e&&e.code;
+        throw {code: c==="storage/unauthorized" ? "not_granted" : c==="storage/quota-exceeded" ? "quota_or_state" : c==="storage/retry-limit-exceeded" ? "rate_limited" : "failed"};
+      });
+  },
+  "delete":function(path){ return FB.storage().ref(path)["delete"](); }
+} : null;
+
+/* ---------- data layer: shared db, local fallback ---------- */
+var DB=(function(){
+  var cdb=null, kind="connecting", local={}, watchers={};
+  function loadLocal(){ try{ local=JSON.parse(localStorage.getItem("sq-local-2")||"{}")||{}; }catch(e){ local={}; } }
+  function saveLocal(){ try{ localStorage.setItem("sq-local-2",JSON.stringify(local)); }catch(e){} }
+  function rows(col){ var o=local[col]||{}; return Object.keys(o).map(function(id){ var r=Object.assign({},o[id]); r.id=id; return r; }); }
+  function notify(col){ (watchers[col]||[]).forEach(function(cb){ cb(rows(col)); }); }
+  return {
+    kind:function(){ return kind; },
+    start:function(){
+      if (FB){ cdb=FB.firestore(); kind="shared"; return Promise.resolve(kind); }
+      loadLocal(); kind="local"; return Promise.resolve(kind);
+    },
+    watch:function(col,cb){
+      if (kind==="shared"){
+        cdb.collection(col).onSnapshot(function(snap){
+          cb(snap.docs.map(function(d){ var r=Object.assign({},d.data()||{}); r.id=d.id; return r; }));
+        }, function(){ setStatus("Live updates paused. Reload to reconnect."); });
+      } else { (watchers[col]=watchers[col]||[]).push(cb); cb(rows(col)); }
+    },
+    set:function(col,id,data){
+      if (kind==="shared") return cdb.doc(col+"/"+id).set(data);
+      local[col]=local[col]||{}; local[col][id]=data; saveLocal(); notify(col); return Promise.resolve();
+    },
+    del:function(col,id){
+      if (kind==="shared") return cdb.doc(col+"/"+id)["delete"]();
+      if (local[col]) delete local[col][id]; saveLocal(); notify(col); return Promise.resolve();
+    }
+  };
+})();
+
+/* ---------- state ---------- */
+var S={ me:null, tab:"board", quests:{}, logs:[], cheers:[], profiles:{}, pfilter:"", pcat:"", posts:[], likes:[], finishes:{}, wcat:"", wsort:"new", assets:undefined, upload:null, loaded:{quests:false,logs:false,cheers:false,profiles:false,posts:false,finishes:false} };
+var TODAY=todayStr();
+function setStatus(t){ document.getElementById("status").textContent=t||""; }
+function questList(){ return Object.keys(S.quests).map(function(k){ return S.quests[k]; }); }
+function myQuests(){ return questList().filter(function(q){ return q.person===S.me; }).sort(function(a,b){ return (a.createdAt||0)-(b.createdAt||0); }); }
+
+/* Progress, 0..1, by quest type.
+   weekly: each week counts up to the weekly target; 100% = target hit in all 8 weeks.
+   total:  amount logged / target.
+   steps:  steps ticked / steps. */
+function questStats(q){
+  var logs=S.logs.filter(function(l){ return l.quest===q.id; });
+  var perWeek={}, total=0, last=null, done={};
+  logs.forEach(function(l){
+    if (l.step!=null){ done[l.step]=l; }
+    else {
+      var a=+l.amount||0; total+=a;
+      var w=weekOf(l.date); if (w>=0) perWeek[w]=(perWeek[w]||0)+a;
+    }
+    var w2=weekOf(l.date); if (w2>=0 && l.step==null) perWeek[w2]=perWeek[w2]||0;
+    if (!last || l.date>last.date || (l.date===last.date && (l.at||0)>(last.at||0))) last=l;
+  });
+  var activeWeeks={}; logs.forEach(function(l){ var w=weekOf(l.date); if (w>=0) activeWeeks[w]=true; });
+  var progress=0, label="", sub="";
+  var N=+q.target||1;
+  if (q.type==="weekly"){
+    var sum=0, hit=0;
+    for (var w=0; w<WEEKS; w++){ var v=perWeek[w]||0; sum+=Math.min(v,N); if (v>=N) hit++; }
+    progress= hit>=FINISH_WEEKS ? 1 : Math.min(.99,sum/(N*FINISH_WEEKS));
+    var thisW = seasonState(TODAY)==="live" ? (perWeek[weekOf(TODAY)]||0) : 0;
+    label='<b>'+Math.min(hit,FINISH_WEEKS)+'</b> of '+FINISH_WEEKS+' weeks hit';
+    sub= seasonState(TODAY)==="live" ? 'This week '+fmtNum(thisW)+'/'+fmtNum(N) : fmtNum(N)+' '+esc(q.unit)+' a week';
+  } else if (q.type==="steps"){
+    var steps=q.steps||[], n=0; steps.forEach(function(s,i){ if (done[i]) n++; });
+    progress= steps.length? n/steps.length : 0;
+    label='<b>'+n+'</b> of '+steps.length+' steps';
+    sub='';
+  } else {
+    progress=Math.min(1,total/N);
+    label='<b>'+fmtNum(total)+'</b> / '+fmtNum(N)+' '+esc(q.unit);
+    sub='';
+  }
+  var pace= seasonState(TODAY)==="pre" ? 0 : Math.min(1,(dnum(TODAY)-dnum(SEASON_START)+1)/(dnum(SEASON_END)-dnum(SEASON_START)+1));
+  var cheers=S.cheers.filter(function(c){ return c.quest===q.id; }).length;
+  return {progress:progress,label:label,sub:sub,perWeek:perWeek,activeWeeks:activeWeeks,wk:Object.keys(activeWeeks).length,we:weeksElapsed(TODAY),last:last,pace:pace,cheers:cheers,logs:logs,done:done,total:total};
+}
+
+/* ---------- boot ---------- */
+function boot(){
+  renderSeason();
+  var h=(location.hash||"").replace("#",""); if (TABS.indexOf(h)>=0) S.tab=h;
+  var saved=store("sq-me");
+  if (saved && byId[saved]) setMe(saved); else showGate();
+  S.assets=Assets;
+  DB.start().then(function(k){
+    setStatus(k==="local" ? "Preview mode: entries are saved on this device only." : "");
+    DB.watch("quests",function(rows){ S.quests={}; rows.forEach(function(r){ if(byId[r.person]) S.quests[r.id]=r; }); S.loaded.quests=true; render(); markFinishes(); });
+    DB.watch("logs",function(rows){ S.logs=rows.filter(function(r){ return r.quest && r.date; }); S.loaded.logs=true; render(); markFinishes(); });
+    DB.watch("finishes",function(rows){ S.finishes={}; rows.forEach(function(r){ S.finishes[r.id]=r; }); S.loaded.finishes=true; markFinishes(); });
+    DB.watch("cheers",function(rows){ S.cheers=rows; S.loaded.cheers=true; render(); });
+    DB.watch("posts",function(rows){ S.posts=rows.filter(function(r){ return byId[r.person] && r.asset; }); S.loaded.posts=true; if (!(S.tab==="wall" && S.upload && S.upload.typing)) render(); });
+    DB.watch("likes",function(rows){ S.likes=rows; if (S.tab==="wall") renderWallFeed(); });
+    DB.watch("profiles",function(rows){ S.profiles={}; rows.forEach(function(r){ if(byId[r.id]) S.profiles[r.id]=r; }); S.loaded.profiles=true; if (S.tab!=="people" || !document.activeElement || !document.activeElement.closest || !document.activeElement.closest("#view-people")) render(); });
+  });
+  document.getElementById("tabs").addEventListener("click",function(e){
+    var b=e.target.closest("button[data-tab]"); if(b) setTab(b.getAttribute("data-tab"));
+  });
+  setInterval(function(){ var t=todayStr(); if (t!==TODAY){ TODAY=t; renderSeason(); if (!draft) render(); } },60000);
+  document.getElementById("switch").addEventListener("click",function(){ store("sq-me",""); S.me=null; showGate(); });
+}
+/* The first time one of my quests reaches 100%, record it once. The Chat notifier listens for these. */
+function markFinishes(){
+  if (!S.me || !S.loaded.quests || !S.loaded.logs || !S.loaded.finishes) return;
+  myQuests().forEach(function(q){
+    if (S.finishes[q.id] || questStats(q).progress<1) return;
+    S.finishes[q.id]={pending:true};
+    DB.set("finishes",q.id,{quest:q.id,person:S.me,name:byId[S.me].name,title:q.title,cat:q.cat,at:Date.now(),date:TODAY})["catch"](function(){});
+  });
+}
+function showGate(){
+  document.getElementById("app").hidden=true; document.getElementById("whoami").hidden=true;
+  document.getElementById("gate").hidden=false;
+  var g=document.getElementById("namegrid");
+  g.innerHTML=ROSTER.map(function(p){ return '<button type="button" data-id="'+p.id+'">'+av(p,"sm")+esc(p.name)+'</button>'; }).join("");
+  g.onclick=function(e){ var b=e.target.closest("button[data-id]"); if(b) setMe(b.getAttribute("data-id")); };
+}
+function setMe(id){
+  S.me=id; store("sq-me",id);
+  document.getElementById("gate").hidden=true; document.getElementById("app").hidden=false;
+  document.getElementById("whoami").hidden=false;
+  var a=document.getElementById("me-av"); a.style.background="hsl("+byId[id].hue+" 45% 46%)"; a.textContent=initials(byId[id].name);
+  document.getElementById("me-nm").textContent=byId[id].name;
+  setTab(S.tab);
+}
+function setTab(t){
+  S.tab=t;
+  Array.prototype.forEach.call(document.querySelectorAll("#tabs button"),function(b){ b.setAttribute("aria-selected", b.getAttribute("data-tab")===t?"true":"false"); });
+  TABS.forEach(function(k){ document.getElementById("view-"+k).hidden = k!==t; });
+  render();
+}
+
+/* ---------- season strip ---------- */
+function renderSeason(){
+  var st=seasonState(TODAY), big=document.getElementById("season-big"), note=document.getElementById("season-note");
+  var tot=dnum(SEASON_END)-dnum(SEASON_START)+1;
+  if (st==="pre"){
+    var d=dnum(SEASON_START)-dnum(TODAY);
+    big.textContent="Starts Monday, 2 November";
+    note.textContent=d+" day"+(d===1?"":"s")+" away · 60 days to add something that stays";
+  } else if (st==="live"){
+    var day=dnum(TODAY)-dnum(SEASON_START)+1;
+    big.textContent=(tot-day+1)+" days left";
+    note.textContent="Day "+day+" of "+tot+" · week "+(weekOf(TODAY)+1)+" of "+WEEKS;
+  } else { big.textContent="That's a wrap on 2026"; note.textContent="Finishers announced on 5 Jan, then the finale"; }
+  document.getElementById("months").innerHTML=MONTHS.map(function(m){
+    var y=+m.key.slice(0,4), mo=+m.key.slice(5,7), days=new Date(Date.UTC(y,mo,0)).getUTCDate();
+    var startN=Math.max(dnum(m.key+"-01"), m.live?dnum(SEASON_START):0), endN=dnum(m.key+"-01")+days-1, f=0;
+    if (!m.live) return '<div class="mseg gone" title="'+m.short+' 2026"><span>'+m.short+'</span></div>';
+    if (dnum(TODAY)>endN) f=1; else if (dnum(TODAY)>=startN) f=(dnum(TODAY)-startN+1)/(endN-startN+1);
+    return '<div class="mseg live'+(f===1?" past":"")+'"><div class="fill" style="width:'+(f*100)+'%"></div><span>'+m.short+'</span></div>';
+  }).join("");
+}
+
+/* ---------- render ---------- */
+function render(){
+  if (!S.me) return;
+  ({board:renderBoard,wall:renderWall,mine:renderMine,ideas:renderIdeas,people:renderPeople,rewards:renderRewards,rules:renderRules})[S.tab]();
+}
+
+function questCard(q, opts){
+  opts=opts||{};
+  var p=byId[q.person], c=CATS[q.cat]||CATS.health, st=questStats(q), mine=q.person===S.me;
+  var live=seasonState(TODAY)==="live";
+  var weeksHtml="";
+  for (var w=0; w<WEEKS; w++){
+    var v=st.perWeek[w]||0, on, part=false;
+    if (q.type==="weekly"){ on = v>=(+q.target||1); part = !on && v>0; }
+    else on = !!st.activeWeeks[w];
+    var fut = w>=st.we;
+    var bg = on ? "background:"+c.color : (part ? "background:"+c.color+";opacity:.35" : "");
+    weeksHtml+='<span class="wk'+(on||part?" on":"")+(fut&&!on&&!part?" future":"")+'" style="'+bg+'" title="Week '+(w+1)+'"></span>';
+  }
+  var cheeredToday=S.cheers.some(function(x){ return x.quest===q.id && x.from===S.me && x.date===TODAY; });
+  var cheerBtn = mine
+    ? '<span class="cheer done">Cheers <span class="n">'+st.cheers+'</span></span>'
+    : '<button type="button" class="cheer'+(cheeredToday?" done":"")+'" data-cheer="'+esc(q.id)+'"'+(cheeredToday?' disabled':'')+'>'+(cheeredToday?"Cheered":"Cheer")+' <span class="n">'+st.cheers+'</span></button>';
+  var buddy;
+  if (q.buddy && byId[q.buddy]) buddy='Buddy: '+esc(first(byId[q.buddy]))+(q.buddy===S.me?' (you)':'');
+  else if (mine) buddy='<select data-setbuddy="'+esc(q.id)+'" aria-label="Pick a buddy"><option value="">+ Add a buddy</option>'+ROSTER.filter(function(r){ return r.id!==S.me && !r.host; }).map(function(r){ return '<option value="'+r.id+'">'+esc(r.name)+'</option>'; }).join("")+'</select>';
+  else if (byId[S.me].host) buddy='No buddy yet';
+  else buddy='No buddy yet · <button type="button" class="linkbtn" data-offer="'+esc(q.id)+'">Be '+esc(first(p))+'\'s buddy</button>';
+  var lastTxt;
+  if (st.last){
+    lastTxt = st.last.step!=null && q.steps ? 'Ticked "'+esc(q.steps[st.last.step]||"")+'" on '+fmtDate(st.last.date)
+      : 'Last: +'+fmtNum(+st.last.amount)+' '+esc(q.unit)+' on '+fmtDate(st.last.date)+(st.last.note?' · '+esc(st.last.note):'');
+  } else lastTxt = live ? "Nothing logged yet." : "Logging opens 2 Nov.";
+  var body="";
+  if (q.type==="steps"){
+    body='<div class="steps'+(opts.editable?'':' ro')+'">'+(q.steps||[]).map(function(s,i){
+      var d=!!st.done[i];
+      return opts.editable
+        ? '<label class="step'+(d?" done":"")+'"><input type="checkbox" data-step="'+i+'" data-q="'+esc(q.id)+'"'+(d?" checked":"")+(live?"":" disabled")+'><span>'+esc(s)+'</span></label>'
+        : '<div class="step'+(d?" done":"")+'"><span>'+esc(s)+'</span></div>';
+    }).join("")+'</div>';
+  }
+  var meter='<div class="meter"><div class="track"><div class="f" style="width:'+(st.progress*100)+'%;background:'+c.color+'"></div>'+(st.pace&&q.type!=="steps"?'<div class="pace" style="left:'+(st.pace*100)+'%" title="Where today sits in the season"></div>':'')+'</div>'+
+    '<div class="meter-row"><span>'+st.label+'</span><span>'+(st.sub?esc(st.sub)+' · ':'')+Math.round(st.progress*100)+'%</span></div></div>';
+  var weeksBlock = q.type==="steps" ? '' : '<div><div class="lbl" style="margin-bottom:5px">'+(q.type==="weekly"?'Weeks at target':'Weeks with a log')+'</div><div class="weeks">'+weeksHtml+'</div></div>';
+  var quick="";
+  if (opts.editable && q.type!=="steps"){
+    var did="f-"+q.id;
+    quick='<form class="q-quick" data-log="'+esc(q.id)+'">'+
+      '<span class="lbl">'+(live?'Log progress':'Logging opens 2 Nov')+'</span>'+
+      '<div class="row"><input id="'+did+'-a" type="number" min="0" step="any" inputmode="decimal" value="1" aria-label="'+esc(q.unit)+'"'+(live?'':' disabled')+'><span class="note">'+esc(q.unit)+'</span>'+
+      '<input id="'+did+'-d" type="date" min="'+SEASON_START+'" max="'+(TODAY<SEASON_END?TODAY:SEASON_END)+'" value="'+(live?TODAY:SEASON_START)+'" aria-label="Date"'+(live?'':' disabled')+'></div>'+
+      '<div class="row"><input id="'+did+'-n" type="text" maxlength="160" placeholder="Note or proof (optional)" aria-label="Note"'+(live?'':' disabled')+'><button class="btn" type="submit"'+(live?'':' disabled')+'>Add</button></div>'+
+    '</form>';
+  }
+  var hist="";
+  if (opts.editable && q.type!=="steps" && st.logs.length){
+    var logs=st.logs.slice().sort(function(a,b){ return b.date.localeCompare(a.date)||(b.at||0)-(a.at||0); });
+    hist='<details class="hist"><summary>History ('+logs.length+')</summary><div class="log-list" style="margin-top:6px">'+logs.map(function(l){
+      return '<div class="log"><span class="d">'+fmtDate(l.date)+'</span><span class="t"><span class="a">+'+fmtNum(+l.amount)+'</span> '+esc(l.note||"")+'</span><button type="button" class="linkbtn" data-del="'+esc(l.id)+'">Remove</button></div>';
+    }).join("")+'</div></details>';
+  }
+  var manage = opts.editable ? '<div class="q-actions"><button type="button" class="linkbtn" data-edit="'+esc(q.id)+'">Edit quest</button><button type="button" class="linkbtn" data-delq="'+esc(q.id)+'">Delete quest</button></div>' : '';
+  return '<article class="quest'+(mine&&!opts.editable?" mine":"")+'">'+
+    '<div class="q-top">'+av(p)+'<div><div class="q-who">'+esc(p.name)+(p.host?' <span class="tag host">host</span>':'')+(st.progress>=1?' <span class="tag fin">finished</span>':'')+'</div><div class="q-buddy">'+buddy+'</div></div></div>'+
+    '<div class="q-title">'+esc(q.title)+'</div>'+
+    (q.why?'<div class="q-why">'+esc(q.why)+'</div>':'')+
+    body+meter+weeksBlock+
+    (opts.editable?'':'<div class="last">'+lastTxt+'</div>')+
+    quick+hist+
+    '<div class="q-foot">'+cheerBtn+'<span class="cat '+c.cls+'">'+c.name+'</span></div>'+manage+
+  '</article>';
+}
+
+function renderBoard(){
+  var el=document.getElementById("view-board");
+  var qs=questList();
+  var people={}; qs.forEach(function(q){ people[q.person]=true; });
+  var waiting=ROSTER.filter(function(p){ return !people[p.id]; });
+  var html='<div class="section-head"><h2>The board</h2><span class="note">'+qs.length+' quest'+(qs.length===1?'':'s')+' · '+Object.keys(people).length+' of '+ROSTER.length+' people</span></div>';
+  if (!S.loaded.quests){ el.innerHTML=html+'<p class="note">Loading quests…</p>'; return; }
+  if (!qs.length){
+    html+='<div class="panel empty"><span class="eyebrow">Nobody yet</span><h3>Be the first quest on the board</h3><p class="note">Pick a goal in Health, Experience, Learn or Stretch, make it countable, and log it from 2 November. Stuck for ideas? The Suggestions tab has plenty.</p><div class="actions"><button type="button" class="btn" data-new="1">Add a quest</button><button type="button" class="ghost" data-go="ideas">See suggestions</button></div></div>';
+  } else {
+    CAT_ORDER.forEach(function(k){
+      var list=qs.filter(function(q){ return q.cat===k; });
+      if (!list.length) return;
+      list.sort(function(a,b){ return questStats(b).progress-questStats(a).progress || (a.createdAt||0)-(b.createdAt||0); });
+      html+='<div class="group"><div class="group-head"><span class="cat '+CATS[k].cls+'">'+CATS[k].name+'</span><span class="gc">'+list.length+' quest'+(list.length===1?'':'s')+'</span></div><div class="quests">'+list.map(function(q){ return questCard(q); }).join("")+'</div></div>';
+    });
+  }
+  if (waiting.length && qs.length){
+    html+='<div class="group"><div class="group-head"><span class="gn" style="font-size:15px">Still deciding</span></div><div class="waiting">'+
+      waiting.map(function(p){ return '<span class="pill">'+av(p,"sm")+esc(first(p))+'</span>'; }).join("")+'</div></div>';
+  }
+  el.innerHTML=html;
+}
+
+/* ---------- my quests ---------- */
+var draft=null, formMsg="";
+function blankDraft(){ return {id:null,cat:"",type:"weekly",title:"",target:"",unit:"",why:"",buddy:"",steps:["","",""]}; }
+function startDraft(seed){ draft=Object.assign(blankDraft(), seed||{}); if (!draft.steps || !draft.steps.length) draft.steps=["","",""]; formMsg=""; setTab("mine"); window.scrollTo(0,0); }
+
+function renderMine(){
+  var el=document.getElementById("view-mine");
+  if (!S.loaded.quests){ el.innerHTML='<p class="note">Loading…</p>'; return; }
+  if (draft){ renderForm(el); return; }
+  var mine=myQuests();
+  var html='<div class="section-head"><h2>My quests</h2><div class="actions"><button type="button" class="ghost" data-go="ideas">Suggestions</button><button type="button" class="btn" data-new="1">Add a quest</button></div></div>';
+  if (!mine.length){
+    html+='<div class="panel empty"><span class="eyebrow">No quests yet</span><h3>What do you want to add to your life by 31 December?</h3><p class="note">Add as many quests as you like, any time. Each one needs something you can count: times a week, a total, or a checklist of steps.</p><div class="actions"><button type="button" class="btn" data-new="1">Add a quest</button><button type="button" class="ghost" data-go="ideas">Browse suggestions</button></div></div>';
+  } else {
+    html+='<div class="quests">'+mine.map(function(q){ return questCard(q,{editable:true}); }).join("")+'</div>';
+  }
+  el.innerHTML=html;
+}
+
+function renderForm(el){
+  var d=draft, editing=!!d.id;
+  var locked=editing && S.logs.some(function(l){ return l.quest===d.id; });
+  var dis=locked?' disabled':'';
+  var catHtml=CAT_ORDER.map(function(k){ var c=CATS[k];
+    return '<button type="button" class="catopt" data-cat="'+k+'" aria-pressed="'+(d.cat===k)+'"'+dis+'><span class="cat '+c.cls+'">'+c.name+'</span><span class="cd">'+c.desc+'</span></button>'; }).join("");
+  var typeHtml=Object.keys(TYPES).map(function(k){ return '<button type="button" data-type="'+k+'" aria-pressed="'+(d.type===k)+'"'+dis+'>'+TYPES[k].name+'</button>'; }).join("");
+  var others=ROSTER.filter(function(p){ return p.id!==S.me && !p.host; }).map(function(p){ var m=skillsOf(p.id).filter(function(k){ return d.cat && k.cat===d.cat; }); return {p:p,m:m}; });
+  others.sort(function(a,b){ return (b.m.length?1:0)-(a.m.length?1:0); });
+  var buddies='<button type="button" class="bchip none" data-pickb="" aria-pressed="'+(!d.buddy)+'">Pick later</button>'+others.map(function(o){ return '<button type="button" class="bchip" data-pickb="'+o.p.id+'" aria-pressed="'+(d.buddy===o.p.id)+'">'+av(o.p,"sm")+esc(first(o.p))+(o.m.length?' <span class="bk">· '+esc(o.m[0].t)+'</span>':'')+'</button>'; }).join("");
+  var measure;
+  if (d.type==="steps"){
+    measure='<div class="field"><span class="lbl">4 · Steps to done</span><div class="steps" style="gap:8px">'+
+      d.steps.map(function(s,i){ return '<input id="q-step-'+i+'" maxlength="60" value="'+esc(s)+'" placeholder="Step '+(i+1)+'"'+dis+' style="padding:9px 11px;border-radius:var(--r-s);border:1px solid var(--line-2);background:var(--card-2)">'; }).join("")+
+      '</div><div class="actions">'+(!locked&&d.steps.length<8?'<button type="button" class="linkbtn" data-addstep="1">Add a step</button>':'')+(!locked&&d.steps.length>2?'<button type="button" class="linkbtn" data-rmstep="1">Remove last step</button>':'')+'</div><span class="hint">Two to eight steps. The last one is the finish line.</span></div>';
+  } else {
+    measure='<div class="row3"><div class="field"><label for="q-target">4 · '+(d.type==="weekly"?'Times a week':'Target')+'</label><input id="q-target" type="number" min="1" step="any" inputmode="decimal" value="'+esc(d.target)+'"'+dis+' placeholder="'+(d.type==="weekly"?'3':'80')+'"></div>'+
+      '<div class="field"><label for="q-unit">Counted in</label><input id="q-unit" maxlength="24" value="'+esc(d.unit)+'"'+dis+' placeholder="'+(d.type==="weekly"?'gym sessions, walks, lessons':'km, books, dishes')+'"></div></div>';
+  }
+  el.innerHTML='<div class="section-head"><h2>'+(editing?'Edit quest':'Add a quest')+'</h2><button type="button" class="ghost" data-go="ideas">Browse suggestions</button></div>'+
+  '<form class="panel form" id="qform">'+
+    '<div class="field"><span class="lbl">1 · Category</span><div class="catpick">'+catHtml+'</div></div>'+
+    '<div class="field"><label for="q-title">2 · Your quest, in one line</label><input id="q-title" maxlength="80" value="'+esc(d.title)+'" placeholder="e.g. Gym 4 times a week"></div>'+
+    '<div class="field"><span class="lbl">3 · How will you count it?</span><div class="seg">'+typeHtml+'</div><span class="hint">'+TYPES[d.type].hint+'</span></div>'+
+    measure+
+    (locked?'<p class="note">Progress is logged, so category, counting and target are locked. Ask Aayush if one needs changing.</p>':'')+
+    '<div class="field"><label for="q-why">5 · Why this matters to you <span style="text-transform:none;letter-spacing:0">(optional, shown on the board)</span></label><textarea id="q-why" maxlength="200" placeholder="One or two lines. This is what people cheer for.">'+esc(d.why)+'</textarea></div>'+
+    '<div class="field"><span class="lbl">6 · Buddy</span><div class="buddies">'+buddies+'</div><span class="hint">Your buddy checks in every Friday. If you finish, they get '+inr(BUDDY_PRIZE)+' too.'+(d.cat?' People who listed a '+CATS[d.cat].name.toLowerCase()+' skill on their profile show first.':'')+'</span></div>'+
+    '<div class="actions"><button class="btn" type="submit">'+(editing?'Save changes':'Add to the board')+'</button><button type="button" class="ghost" id="q-cancel">Cancel</button><span class="msg'+(formMsg?" err":"")+'" id="q-msg">'+esc(formMsg)+'</span></div>'+
+  '</form>';
+  var form=document.getElementById("qform");
+  function sync(){
+    d.title=val("q-title"); d.why=val("q-why");
+    if (d.type==="steps"){ d.steps=d.steps.map(function(s,i){ return val("q-step-"+i); }); }
+    else { d.target=val("q-target"); d.unit=val("q-unit"); }
+  }
+  form.addEventListener("click",function(e){
+    var t;
+    if ((t=e.target.closest("[data-cat]"))){ sync(); d.cat=t.getAttribute("data-cat"); renderForm(el); }
+    else if ((t=e.target.closest("[data-type]"))){ sync(); d.type=t.getAttribute("data-type"); renderForm(el); }
+    else if ((t=e.target.closest("[data-pickb]"))){ sync(); d.buddy=t.getAttribute("data-pickb"); renderForm(el); }
+    else if (e.target.closest("[data-addstep]")){ sync(); d.steps.push(""); renderForm(el); }
+    else if (e.target.closest("[data-rmstep]")){ sync(); d.steps.pop(); renderForm(el); }
+  });
+  document.getElementById("q-cancel").onclick=function(){ draft=null; formMsg=""; renderMine(); };
+  form.onsubmit=function(e){
+    e.preventDefault(); sync();
+    if (!d.cat) return fail("Pick a category.");
+    if (d.title.trim().length<4) return fail("Write your quest in one line.");
+    var data={person:S.me,name:byId[S.me].name,cat:d.cat,type:d.type,title:d.title.trim(),why:d.why.trim(),buddy:d.buddy||""};
+    if (d.type==="steps"){
+      var steps=d.steps.map(function(s){ return s.trim(); }).filter(Boolean);
+      if (steps.length<2) return fail("Add at least two steps.");
+      data.steps=steps; data.target=steps.length; data.unit="steps";
+    } else {
+      var t=parseFloat(d.target);
+      if (!(t>0)) return fail("Set a number above zero.");
+      if (d.type==="weekly" && t>14) return fail("Keep the weekly number to 14 or less.");
+      if (!d.unit.trim()) return fail("Say what you're counting, like sessions or km.");
+      data.target=t; data.unit=d.unit.trim();
+    }
+    var id=d.id || (S.me+"_"+Date.now());
+    var prev=S.quests[id];
+    if (locked && prev) ["cat","type","target","unit","steps"].forEach(function(k){ if (prev[k]!==undefined) data[k]=prev[k]; else delete data[k]; });
+    data.createdAt=(prev&&prev.createdAt)||Date.now(); data.updatedAt=Date.now();
+    DB.set("quests",id,data).then(function(){ var was=!!d.id; draft=null; formMsg=""; toast(was?"Quest updated":"Quest added to the board"); setTab("mine"); })["catch"](function(){ fail("Couldn't save. Check your connection and try again."); });
+  };
+  function fail(m){ formMsg=m; var x=document.getElementById("q-msg"); x.className="msg err"; x.textContent=m; return false; }
+}
+
+/* ---------- suggestions ---------- */
+function renderIdeas(){
+  var el=document.getElementById("view-ideas");
+  var html='<div class="section-head"><h2>Suggestions</h2><span class="note">Tap "Use this" to start from one, then make it yours.</span></div>'+
+  '<div class="sugg-intro">'+
+    '<div class="panel tip"><b>Make it countable</b><span>"Get fit" can\'t be tracked. "Gym 4 times a week" can.</span></div>'+
+    '<div class="panel tip"><b>Make it a stretch</b><span>If you could do it in November alone, raise the bar.</span></div>'+
+    '<div class="panel tip"><b>Pair them up</b><span>Visit Korea and learn Korean. Run a half marathon and lights out by 11.</span></div>'+
+    '<div class="panel tip"><b>Start small, add later</b><span>Add a second quest later in the season once the first one is a habit.</span></div>'+
+  '</div>';
+  CAT_ORDER.forEach(function(k){
+    html+='<div class="group"><div class="group-head"><span class="cat '+CATS[k].cls+'">'+CATS[k].name+'</span><span class="gc">'+CATS[k].desc+'</span></div><div class="sugg">'+
+      IDEAS[k].map(function(it,i){
+        var meta = it[1]==="weekly" ? it[2]+' '+it[3]+' a week' : it[1]==="total" ? it[2]+' '+it[3]+' by 31 Dec' : (it[5]||[]).length+'-step checklist';
+        return '<div class="sg"><div class="st">'+esc(it[0])+'</div><div class="sm">'+esc(meta)+'</div><div class="sd">'+esc(it[4])+'</div>'+
+          (it[1]==="steps"?'<ol>'+it[5].map(function(s){ return '<li>'+esc(s)+'</li>'; }).join("")+'</ol>':'')+
+          '<button type="button" class="ghost" data-use="'+k+':'+i+'">Use this</button></div>';
+      }).join("")+'</div></div>';
+  });
+  el.innerHTML=html;
+}
+
+/* ---------- wall ---------- */
+var HEART='<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.2C1 8.6 2.9 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21.1 5 23 8.6 21.6 11.8 19.5 16.4 12 21 12 21z"/></svg>';
+var MAX_BYTES=20*1024*1024;
+function fmtAgo(ts){ var m=Math.round((Date.now()-ts)/60000); if (m<1) return "just now"; if (m<60) return m+"m ago"; var h=Math.round(m/60); if (h<24) return h+"h ago"; var d=new Date(ts); return d.getDate()+" "+["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][d.getMonth()]; }
+function renderWall(){
+  var el=document.getElementById("view-wall");
+  var mq=myQuests();
+  var u=S.upload||{};
+  var comp;
+  if (S.assets===undefined) comp='<div class="panel composer"><span class="note">Checking upload access…</span></div>';
+  else if (S.assets===null) comp='<div class="panel composer"><span class="eyebrow">Post to the wall</span><p class="note">Uploads aren\'t set up on this board yet. Ask Aayush.</p></div>';
+  else comp='<form class="panel composer" id="postform">'+
+    '<span class="eyebrow">Post to the wall</span>'+
+    (u.file ? (u.kind==="video" ? '<video class="preview" src="'+u.preview+'" controls playsinline muted></video>' : '<img class="preview" src="'+u.preview+'" alt="Preview of your upload">') +'<div><button type="button" class="linkbtn" id="w-clear">Choose a different file</button></div>'
+      : '<label class="drop" id="w-drop" for="w-file"><b>Add a photo or video</b><span class="note">A run screenshot, a dish you cooked, you speaking Korean. Videos up to 20 MB, roughly 30 seconds on most phones.</span></label>')+
+    '<input id="w-file" type="file" accept="image/*,video/*" hidden>'+
+    '<div class="row2"><div class="field"><label for="w-quest">For which quest</label><select id="w-quest"><option value="">Just sharing</option>'+mq.map(function(q){ return '<option value="'+esc(q.id)+'"'+(u.quest===q.id?' selected':'')+'>'+esc(q.title)+'</option>'; }).join("")+'</select></div>'+
+    '<div class="field"><label for="w-cap">Caption</label><input id="w-cap" maxlength="140" value="'+esc(u.caption||"")+'" placeholder="First 5K under 30 minutes"></div></div>'+
+    (u.busy?'<div class="progressbar"><span></span></div>':'')+
+    '<div class="actions"><button class="btn" type="submit"'+(u.file&&!u.busy?'':' disabled')+'>'+(u.busy?'Uploading…':'Post')+'</button><span class="msg'+(u.err?' err':'')+'">'+esc(u.err||"")+'</span></div>'+
+  '</form>';
+  var html='<div class="section-head"><h2>The wall</h2><span class="note">Proof, progress and small wins. Tap the heart to cheer.</span></div>'+comp+
+    '<div class="filters"><div class="seg"><button type="button" data-wcat="" aria-pressed="'+(!S.wcat)+'">All</button>'+CAT_ORDER.map(function(k){ return '<button type="button" data-wcat="'+k+'" aria-pressed="'+(S.wcat===k)+'">'+CATS[k].name+'</button>'; }).join("")+'</div>'+
+    '<div class="seg"><button type="button" data-wsort="new" aria-pressed="'+(S.wsort==="new")+'">Latest</button><button type="button" data-wsort="top" aria-pressed="'+(S.wsort==="top")+'">Most liked</button></div></div>'+
+    '<div id="wall-feed"></div>';
+  el.innerHTML=html;
+  bindWall();
+  renderWallFeed();
+}
+function likesFor(id){ return S.likes.filter(function(l){ return l.post===id && byId[l.from]; }); }
+function renderWallFeed(){
+  var feed=document.getElementById("wall-feed"); if (!feed) return;
+  if (!S.loaded.posts){ feed.innerHTML='<p class="note">Loading the wall…</p>'; return; }
+  var posts=S.posts.filter(function(p){ if (!S.wcat) return true; var q=S.quests[p.quest]; return q && q.cat===S.wcat; });
+  posts=posts.map(function(p){ return {p:p,l:likesFor(p.id)}; });
+  posts.sort(S.wsort==="top" ? function(a,b){ return b.l.length-a.l.length || (b.p.at||0)-(a.p.at||0); } : function(a,b){ return (b.p.at||0)-(a.p.at||0); });
+  if (!posts.length){ feed.innerHTML='<div class="panel empty"><span class="eyebrow">Nothing here yet</span><h3>Post the first one</h3><p class="note">A gym selfie, a Strava screenshot, a clip of you practising. Small wins count.</p></div>'; return; }
+  feed.innerHTML='<div class="wall">'+posts.map(function(x){
+    var p=x.p, who=byId[p.person], q=S.quests[p.quest], c=q?(CATS[q.cat]||CATS.learn):null;
+    var src=p.url||"";
+    var media = p.kind==="video" ? '<video class="media" src="'+src+'" controls playsinline preload="metadata"></video>' : '<img class="media" src="'+src+'" alt="'+esc(p.caption||("Progress photo from "+who.name))+'" loading="lazy">';
+    var liked=x.l.some(function(l){ return l.from===S.me; });
+    var names=x.l.map(function(l){ return first(byId[l.from]); });
+    return '<article class="post">'+media+'<div class="pb">'+
+      '<div class="pmeta">'+av(who,"sm")+'<b style="font-weight:600">'+esc(first(who))+'</b><span class="when">'+fmtAgo(p.at||Date.now())+'</span></div>'+
+      (p.caption?'<div class="cap">'+esc(p.caption)+'</div>':'')+
+      (q?'<div class="qt"><span class="cat '+c.cls+'" style="margin-right:6px">'+c.name+'</span>'+esc(q.title)+'</div>':'')+
+      '<div class="pf"><button type="button" class="like'+(liked?' on':'')+'" data-like="'+esc(p.id)+'" aria-pressed="'+liked+'" aria-label="'+(liked?'Unlike':'Like')+'">'+HEART+'<span class="n">'+x.l.length+'</span></button>'+
+      (p.person===S.me?'<button type="button" class="linkbtn" data-delpost="'+esc(p.id)+'">Delete</button>':'')+'</div>'+
+      (names.length?'<div class="likers">Liked by '+esc(names.slice(0,4).join(", "))+(names.length>4?' and '+(names.length-4)+' more':'')+'</div>':'')+
+    '</div></article>';
+  }).join("")+'</div>';
+  Array.prototype.forEach.call(feed.querySelectorAll(".media"),function(m){ m.addEventListener("error",function(){ var d=document.createElement("div"); d.className="missing"; d.textContent="This file can't be shown here."; m.replaceWith(d); }); });
+}
+function shrinkImage(file){
+  return new Promise(function(resolve){
+    if (!/^image\/(jpeg|png|webp|heic|heif)$/.test(file.type) && !/^image\//.test(file.type)) return resolve(file);
+    if (file.type==="image/gif") return resolve(file);
+    var url=URL.createObjectURL(file), img=new Image();
+    img.onload=function(){
+      var max=1800, w=img.naturalWidth, h=img.naturalHeight, k=Math.min(1,max/Math.max(w,h));
+      if (k===1 && file.size<2.5*1024*1024){ URL.revokeObjectURL(url); return resolve(file); }
+      var cv=document.createElement("canvas"); cv.width=Math.round(w*k); cv.height=Math.round(h*k);
+      cv.getContext("2d").drawImage(img,0,0,cv.width,cv.height);
+      cv.toBlob(function(b){ URL.revokeObjectURL(url); resolve(b||file); },"image/jpeg",0.85);
+    };
+    img.onerror=function(){ URL.revokeObjectURL(url); resolve(file); };
+    img.src=url;
+  });
+}
+function pickFile(f){
+  if (!f) return;
+  var kind=/^video\//.test(f.type)?"video":(/^image\//.test(f.type)?"image":null);
+  var u=S.upload=S.upload||{};
+  u.caption=val("w-cap"); u.quest=val("w-quest");
+  if (!kind){ u.err="That file type isn't supported. Use a photo or a video."; renderWall(); return; }
+  if (kind==="video" && f.size>MAX_BYTES){ u.err="That video is "+(f.size/1048576).toFixed(0)+" MB. Keep clips under 20 MB: trim it or record a shorter one."; renderWall(); return; }
+  if (u.preview) try{ URL.revokeObjectURL(u.preview); }catch(e){}
+  u.file=f; u.kind=kind; u.preview=URL.createObjectURL(f); u.err="";
+  renderWall();
+}
+function bindWall(){
+  var fi=document.getElementById("w-file");
+  if (fi) fi.onchange=function(){ pickFile(fi.files && fi.files[0]); };
+  var dr=document.getElementById("w-drop");
+  if (dr){
+    dr.addEventListener("dragover",function(e){ e.preventDefault(); dr.classList.add("over"); });
+    dr.addEventListener("dragleave",function(){ dr.classList.remove("over"); });
+    dr.addEventListener("drop",function(e){ e.preventDefault(); dr.classList.remove("over"); pickFile(e.dataTransfer.files && e.dataTransfer.files[0]); });
+  }
+  var cl=document.getElementById("w-clear");
+  if (cl) cl.onclick=function(){ var u=S.upload; u.caption=val("w-cap"); u.quest=val("w-quest"); if (u.preview) try{ URL.revokeObjectURL(u.preview); }catch(e){} u.file=null; u.preview=null; renderWall(); };
+  var cap=document.getElementById("w-cap");
+  if (cap){ cap.onfocus=function(){ (S.upload=S.upload||{}).typing=true; }; cap.onblur=function(){ if (S.upload) S.upload.typing=false; }; }
+  var form=document.getElementById("postform");
+  if (form) form.onsubmit=function(e){
+    e.preventDefault();
+    var u=S.upload; if (!u || !u.file || u.busy) return;
+    u.caption=val("w-cap").trim(); u.quest=val("w-quest"); u.busy=true; u.err=""; u.typing=false; renderWall();
+    var prep = u.kind==="image" ? shrinkImage(u.file) : Promise.resolve(u.file);
+    prep.then(function(blob){
+      if (blob.size>MAX_BYTES) throw {code:"too_large"};
+      return S.assets.upload(blob,u.kind);
+    }).then(function(r){
+      var id=S.me+"_"+Date.now();
+      return DB.set("posts",id,{person:S.me,name:byId[S.me].name,quest:u.quest||"",caption:u.caption.slice(0,140),asset:r.id,url:r.url,kind:u.kind,at:Date.now(),date:TODAY});
+    }).then(function(){
+      if (u.preview) try{ URL.revokeObjectURL(u.preview); }catch(e){}
+      S.upload=null; toast("Posted to the wall"); renderWall();
+    })["catch"](function(err){
+      var code=err&&err.code;
+      u.busy=false;
+      u.err = code==="too_large" ? "That file is over 20 MB. Trim it or pick a smaller one."
+        : code==="unsupported_type" ? "That format isn't supported. Try a JPG, PNG or MP4."
+        : code==="quota_or_state" ? "The board's storage is full. Tell Aayush."
+        : code==="rate_limited" ? "Too many uploads at once. Wait a minute and try again."
+        : code==="not_granted" ? "The board refused that upload. Use a photo, or a video under 20 MB."
+        : "Upload failed. Check your connection and try again.";
+      renderWall();
+    });
+  };
+}
+
+/* ---------- people ---------- */
+function skillsOf(id){ var pr=S.profiles[id]; return (pr && pr.skills) ? pr.skills.filter(function(k){ return k && k.t; }) : []; }
+function saveProfile(patch){
+  var cur=S.profiles[S.me]||{}; var data={skills:(cur.skills||[]).slice(),about:cur.about||"",updatedAt:Date.now()};
+  Object.keys(patch).forEach(function(k){ data[k]=patch[k]; });
+  return DB.set("profiles",S.me,data);
+}
+function renderPeople(){
+  var el=document.getElementById("view-people");
+  var q=S.pfilter.trim().toLowerCase(), cf=S.pcat;
+  var mine=S.profiles[S.me]||{}, mySkills=skillsOf(S.me);
+  var html='<div class="section-head"><h2>People</h2><span class="note">What the team is good at, outside work. Find a buddy who\'s done it before.</span></div>';
+  html+='<div class="panel form" style="margin-bottom:18px"><div><span class="eyebrow">Your profile</span><h3 style="font-size:19px;margin-top:4px">What can people come to you for?</h3></div>'+
+    '<div class="skills">'+(mySkills.length? mySkills.map(function(k,i){ var c=CATS[k.cat]||CATS.learn; return '<span class="skill '+c.cls+'">'+esc(k.t)+'<button type="button" class="x" data-rmskill="'+i+'" aria-label="Remove '+esc(k.t)+'">×</button></span>'; }).join("") : '<span class="note">No skills yet. Gym routines, South Indian cooking, solo travel, guitar, Excel, anything you\'d happily teach.</span>')+'</div>'+
+    '<form class="addskill" id="skillform"><input id="sk-t" maxlength="40" placeholder="e.g. Strength training, 6 years" aria-label="Skill"><select id="sk-c" aria-label="Category">'+CAT_ORDER.map(function(k){ return '<option value="'+k+'">'+CATS[k].name+'</option>'; }).join("")+'</select><button class="btn" type="submit">Add skill</button></form>'+
+    '<div class="field"><label for="sk-about">One line about you <span style="text-transform:none;letter-spacing:0">(optional)</span></label><input class="pfield" id="sk-about" maxlength="120" value="'+esc(mine.about||"")+'" placeholder="e.g. Gym every morning since 2018. Happy to plan your first month."></div>'+
+  '</div>';
+  html+='<div class="filters"><input id="pf-q" type="search" placeholder="Search skills: gym, cooking, Korean…" value="'+esc(S.pfilter)+'" aria-label="Search skills"><div class="seg">'+
+    '<button type="button" data-pcat="" aria-pressed="'+(!cf)+'">All</button>'+CAT_ORDER.map(function(k){ return '<button type="button" data-pcat="'+k+'" aria-pressed="'+(cf===k)+'">'+CATS[k].name+'</button>'; }).join("")+'</div></div>';
+  var list=ROSTER.map(function(p){
+    var sk=skillsOf(p.id);
+    var hits=sk.map(function(k){ return (!cf||k.cat===cf) && (!q||k.t.toLowerCase().indexOf(q)>=0); });
+    var any=hits.some(Boolean);
+    return {p:p,sk:sk,hits:hits,show:(!q&&!cf)||any,n:sk.length};
+  }).filter(function(x){ return x.show; });
+  list.sort(function(a,b){ return (b.p.id===S.me)-(a.p.id===S.me) || b.n-a.n || a.p.name.localeCompare(b.p.name); });
+  if (!list.length){ html+='<div class="panel empty"><h3>Nobody yet</h3><p class="note">No one has listed that skill. Try another word, or be the first to add it.</p></div>'; el.innerHTML=html; bindPeople(); return; }
+  html+='<div class="people">'+list.map(function(x){
+    var pr=S.profiles[x.p.id]||{}, isMe=x.p.id===S.me;
+    var chips=x.sk.length? x.sk.map(function(k,i){ var c=CATS[k.cat]||CATS.learn; return '<span class="skill '+c.cls+((q||cf)&&x.hits[i]?' hit':'')+'">'+esc(k.t)+'</span>'; }).join("") : '<span class="note">Hasn\'t added skills yet.</span>';
+    var firstCat = x.sk.length ? x.sk[0].cat : "";
+    return '<div class="pcard'+(isMe?' me':'')+'"><div class="q-top">'+av(x.p)+'<div><div class="pn">'+esc(x.p.name)+(isMe?' <span class="tag host">you</span>':'')+'</div></div></div>'+
+      (pr.about?'<div class="pa">'+esc(pr.about)+'</div>':'')+
+      '<div class="skills">'+chips+'</div>'+
+      (!isMe && !x.p.host && x.sk.length ? '<div><button type="button" class="ghost" data-buddywith="'+x.p.id+'" data-bcat="'+esc(cf||firstCat)+'">Start a quest with '+esc(first(x.p))+' as buddy</button></div>' : '')+
+    '</div>';
+  }).join("")+'</div>';
+  el.innerHTML=html; bindPeople();
+}
+function bindPeople(){
+  var f=document.getElementById("skillform");
+  if (f) f.onsubmit=function(e){
+    e.preventDefault();
+    var t=val("sk-t").trim(), c=val("sk-c");
+    if (t.length<2) return toast("Name the skill first.");
+    var sk=skillsOf(S.me).slice(); if (sk.length>=12) return toast("Twelve skills max. Remove one first.");
+    sk.push({t:t.slice(0,40),cat:c});
+    saveProfile({skills:sk}).then(function(){ toast("Skill added"); })["catch"](function(){ toast("Couldn't save. Check your connection and try again."); });
+  };
+  var ab=document.getElementById("sk-about");
+  if (ab) ab.onchange=function(){ saveProfile({about:ab.value.trim().slice(0,120)}).then(function(){ toast("Saved"); }); };
+  var qi=document.getElementById("pf-q");
+  if (qi) qi.oninput=function(){ S.pfilter=qi.value; var pos=qi.selectionStart; renderPeople(); var n=document.getElementById("pf-q"); n.focus(); try{ n.setSelectionRange(pos,pos); }catch(e){} };
+}
+
+/* ---------- rewards ---------- */
+function renderRewards(){
+  var el=document.getElementById("view-rewards");
+  function tl(w,t){ return '<div class="tl"><span class="when">'+w+'</span><span>'+t+'</span></div>'; }
+  el.innerHTML='<div class="section-head"><h2>Rewards</h2><span class="note">One person can earn up to '+inr(FINISHER_PRIZE+BUDDY_PRIZE+STORY_PRIZE)+'.</span></div>'+
+  '<div class="rewards">'+
+    '<div class="panel reward"><span class="eyebrow">Finish a quest</span><div class="amt">'+inr(FINISHER_PRIZE)+'</div><h3>Every finisher</h3><p>Complete any quest at 100% by 31 December.</p><ul><li>Once per person, however many quests you finish.</li><li>Finishing gets you into the finale.</li></ul></div>'+
+    '<div class="panel reward"><span class="eyebrow">Back someone</span><div class="amt">'+inr(BUDDY_PRIZE)+'</div><h3>Every finisher\'s buddy</h3><p>If the person you buddy finishes, you get the same amount.</p><ul><li>Paid once per person, however many finishers you back.</li><li>Several quests with different buddies? The buddy on the first quest they finish gets it.</li><li>You can be a buddy and a finisher. Both pay.</li></ul></div>'+
+    '<div class="panel reward big"><span class="eyebrow">The finale</span><div class="amt">'+inr(STORY_PRIZE)+'</div><h3>Story of the Year</h3><p>One winner, picked by the whole team.</p><ul><li>Open to every finisher, on top of their '+inr(FINISHER_PRIZE)+'.</li><li>Finish, back a finisher and win the vote: '+inr(FINISHER_PRIZE+BUDDY_PRIZE+STORY_PRIZE)+'.</li></ul></div>'+
+  '</div>'+
+  '<div class="panel rule"><h3>How the winner is picked</h3><div class="timeline">'+
+    tl("31 Dec","The 60 days end. Last day to log or tick a step.")+
+    tl("5 Jan","The finishers list goes up. Aayush checks every finished quest.")+
+    tl("The finale","Every finisher pitches one success story. One pitch per person, even if you finished ten quests.")+
+    tl("The vote","Everyone on the team votes for the story they liked most. Most votes wins.")+
+    tl("The winner","One winner takes '+inr(STORY_PRIZE)+'. If it\'s a tie, the tied finishers go to a quick revote.")+
+  '</div></div>'+
+  '<p class="note" style="margin-top:12px">Aayush plays too, but isn\'t eligible for rewards and can\'t be picked as a buddy.</p>';
+}
+
+/* ---------- rules ---------- */
+function renderRules(){
+  var el=document.getElementById("view-rules");
+  function tl(w,t){ return '<div class="tl"><span class="when">'+w+'</span><span>'+t+'</span></div>'; }
+  el.innerHTML='<div class="section-head"><h2>How it works</h2><span class="note">Business goals get reviewed every quarter. Your life goals deserve the same.</span></div>'+
+  '<div class="rules">'+
+    '<div class="panel rule"><h3>Your quests</h3><ul>'+
+      '<li>A life goal: something new that stays with you after December. A language, a habit, a skill, a place.</li>'+
+      '<li>Start something new. Not a work KRA, and not a goal you\'re already halfway through.</li>'+
+      '<li>Health, Experience, Learn or Stretch. Add as many as you like, whenever you like.</li>'+
+      '<li>Count it one of three ways: times a week, a total by 31 Dec, or a checklist of steps.</li>'+
+      '<li>Aayush reviews every target and may nudge soft ones up. Category, counting and target lock once you log progress.</li>'+
+      '<li>Stretch quests are responsibilities beyond your role, agreed with Aayush first.</li>'+
+    '</ul></div>'+
+    '<div class="panel rule"><h3>Staying on it</h3><ul>'+
+      '<li>Log as you go. Weekly habits run Monday to Sunday.</li>'+
+      '<li>Pick a buddy and check on each other every Friday. No buddy yet? Anyone can tap "Be their buddy" on your card.</li>'+
+      '<li>Post proof on the Wall: a run screenshot, a dish, a clip of you speaking the language. Like what others post.</li>'+
+      '<li>Cheer anyone\'s quest once a day.</li>'+
+    '</ul></div>'+
+    '<div class="panel rule"><h3>What counts as done</h3><div class="formula">Every week: target hit in 7 of the 8 weeks<br>A total: the full number by 31 Dec<br>A checklist: every step ticked</div>'+
+      '<ul><li>Weekly quests allow one off-week: miss a week to illness or travel and you can still finish.</li><li>The last week runs 21–31 Dec, so the holidays get a little slack.</li><li>A quest added late is still judged from 2 Nov. You can backdate logs, but start early.</li><li>Honour system. Buddies flag anything that looks off.</li></ul></div>'+
+    '<div class="panel rule"><h3>Rewards</h3><ul>'+
+      '<li>'+inr(FINISHER_PRIZE)+' for every finisher, and '+inr(BUDDY_PRIZE)+' for their buddy.</li>'+
+      '<li>'+inr(STORY_PRIZE)+' for the Story of the Year, voted at the January finale.</li>'+
+      '<li><button type="button" class="linkbtn" data-go="rewards" style="color:var(--accent);font-size:14px">See the full rewards</button></li>'+
+    '</ul></div>'+
+    '<div class="panel rule" style="grid-column:1/-1"><h3>Calendar</h3><div class="timeline">'+
+      tl("Any time","Add your skills on People. Add a quest, decide how you\'ll count it, pick a buddy who knows the ground.")+
+      tl("2 Nov","Day 1 of 60. Logging opens.")+
+      tl("End of Nov","Halfway. Shout-outs at the team meeting.")+
+      tl("31 Dec","Day 60. Last day to log.")+
+      tl("5 Jan","Finishers list goes up, then the finale: pitches, the vote, rewards.")+
+    '</div></div>'+
+  '</div>';
+}
+
+/* ---------- global events ---------- */
+document.addEventListener("click",function(e){
+  var t;
+  if ((t=e.target.closest("[data-go]"))){ draft=null; setTab(t.getAttribute("data-go")); return; }
+  if ((t=e.target.closest("[data-new]"))){ startDraft(); return; }
+  if ((t=e.target.closest("[data-use]"))){
+    var p=t.getAttribute("data-use").split(":"), it=IDEAS[p[0]][+p[1]];
+    startDraft({cat:p[0],type:it[1],title:it[0],target:it[1]==="steps"?"":String(it[2]),unit:it[1]==="steps"?"":it[3],steps:it[1]==="steps"?it[5].slice():["","",""]});
+    return;
+  }
+  if ((t=e.target.closest("[data-edit]"))){
+    var q=S.quests[t.getAttribute("data-edit")]; if (!q) return;
+    startDraft({id:q.id,cat:q.cat,type:q.type||"total",title:q.title,target:String(q.target||""),unit:q.unit||"",why:q.why||"",buddy:q.buddy||"",steps:(q.steps||[]).slice()});
+    return;
+  }
+  if ((t=e.target.closest("[data-delq]"))){
+    var qid=t.getAttribute("data-delq");
+    if (t.getAttribute("data-armed")){
+      var logs=S.logs.filter(function(l){ return l.quest===qid; });
+      var cheers=S.cheers.filter(function(c){ return c.quest===qid; });
+      DB.del("quests",qid).then(function(){ logs.forEach(function(l){ DB.del("logs",l.id); }); cheers.forEach(function(c){ DB.del("cheers",c.id); }); toast("Quest deleted"); });
+    } else arm(t,"Confirm delete","Delete quest");
+    return;
+  }
+  if ((t=e.target.closest("[data-wcat]"))){ S.wcat=t.getAttribute("data-wcat"); renderWall(); return; }
+  if ((t=e.target.closest("[data-wsort]"))){ S.wsort=t.getAttribute("data-wsort"); renderWall(); return; }
+  if ((t=e.target.closest("[data-like]"))){
+    var pid=t.getAttribute("data-like"), lid=pid+"_"+S.me;
+    var has=S.likes.some(function(l){ return l.id===lid; });
+    (has ? DB.del("likes",lid) : DB.set("likes",lid,{post:pid,from:S.me,at:Date.now()}))["catch"](function(){ toast("Couldn't save that like."); });
+    return;
+  }
+  if ((t=e.target.closest("[data-delpost]"))){
+    var dp=t.getAttribute("data-delpost"), post=S.posts.filter(function(x){ return x.id===dp; })[0];
+    if (t.getAttribute("data-armed")){
+      DB.del("posts",dp).then(function(){
+        if (post && S.assets) S.assets["delete"](post.asset)["catch"](function(){});
+        S.likes.filter(function(l){ return l.post===dp; }).forEach(function(l){ DB.del("likes",l.id)["catch"](function(){}); });
+        toast("Post deleted");
+      });
+    } else arm(t,"Confirm delete","Delete");
+    return;
+  }
+  if ((t=e.target.closest("[data-rmskill]"))){
+    var sk=skillsOf(S.me).slice(); sk.splice(+t.getAttribute("data-rmskill"),1);
+    saveProfile({skills:sk}).then(function(){ toast("Skill removed"); }); return;
+  }
+  if ((t=e.target.closest("[data-pcat]"))){ S.pcat=t.getAttribute("data-pcat"); renderPeople(); return; }
+  if ((t=e.target.closest("[data-buddywith]"))){ startDraft({buddy:t.getAttribute("data-buddywith"),cat:t.getAttribute("data-bcat")||""}); return; }
+  if ((t=e.target.closest("[data-offer]"))){
+    var oq=S.quests[t.getAttribute("data-offer")]; if (!oq || oq.buddy) return;
+    DB.set("quests",oq.id,Object.assign({},stripId(oq),{buddy:S.me,updatedAt:Date.now()})).then(function(){ toast("You're "+first(byId[oq.person])+"'s buddy"); })["catch"](function(){ toast("Couldn't save that."); });
+    return;
+  }
+  if ((t=e.target.closest("[data-cheer]")) && !t.disabled){
+    var cq=S.quests[t.getAttribute("data-cheer")]; if (!cq) return; t.disabled=true;
+    DB.set("cheers",cq.id+"_"+S.me+"_"+TODAY,{quest:cq.id,owner:cq.person,from:S.me,date:TODAY,at:Date.now()})
+      .then(function(){ toast("Cheered "+first(byId[cq.person])); })["catch"](function(){ t.disabled=false; toast("Couldn't save that cheer."); });
+    return;
+  }
+  if ((t=e.target.closest("[data-del]"))){
+    if (t.getAttribute("data-armed")) DB.del("logs",t.getAttribute("data-del")).then(function(){ toast("Entry removed"); });
+    else arm(t,"Confirm remove","Remove");
+  }
+});
+function arm(btn,on,off){ btn.setAttribute("data-armed","1"); btn.textContent=on; setTimeout(function(){ if(btn.isConnected){ btn.removeAttribute("data-armed"); btn.textContent=off; } },3000); }
+
+function stripId(q){ var o=Object.assign({},q); delete o.id; return o; }
+document.addEventListener("change",function(e){
+  var sb=e.target.closest("select[data-setbuddy]");
+  if (sb){ var bq=S.quests[sb.getAttribute("data-setbuddy")]; if (bq && sb.value){ DB.set("quests",bq.id,Object.assign({},stripId(bq),{buddy:sb.value,updatedAt:Date.now()})).then(function(){ toast(first(byId[sb.value])+" is your buddy"); }); } return; }
+  var cb=e.target.closest("input[data-step]"); if (!cb) return;
+  var qid=cb.getAttribute("data-q"), i=+cb.getAttribute("data-step"), q=S.quests[qid]; if (!q) return;
+  var docId=qid+"_step"+i;
+  if (cb.checked) DB.set("logs",docId,{quest:qid,person:S.me,step:i,date:(TODAY>SEASON_END?SEASON_END:TODAY),at:Date.now()}).then(function(){ toast("Step done: "+q.steps[i]); });
+  else DB.del("logs",docId);
+});
+
+document.addEventListener("submit",function(e){
+  var f=e.target.closest("form[data-log]"); if (!f) return;
+  e.preventDefault();
+  var qid=f.getAttribute("data-log"), q=S.quests[qid], base="f-"+qid;
+  var amt=parseFloat(val(base+"-a")), date=val(base+"-d"), note=val(base+"-n").trim();
+  if (!(amt>0)) return toast("Enter an amount above zero.");
+  if (!date || date<SEASON_START || date>TODAY || date>SEASON_END) return toast("Pick a date inside the season, up to today.");
+  DB.set("logs",qid+"_"+Date.now(),{quest:qid,person:S.me,amount:amt,date:date,note:note.slice(0,160),at:Date.now()})
+    .then(function(){ toast("Logged +"+fmtNum(amt)+" "+q.unit); })["catch"](function(){ toast("Couldn't save. Check your connection and try again."); });
+});
+
+boot();
+})();
+</script>
+
+</body></html>

@@ -1,0 +1,17 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // No sign-in: teammates pick their name on the page, so anyone with the link can read and write.
+    // Keep the link inside the team.
+    match /{col}/{id} {
+      allow read: if col in ['quests', 'logs', 'cheers', 'posts', 'likes', 'profiles', 'finishes'];
+      allow create, update: if col in ['quests', 'logs', 'cheers', 'posts', 'likes', 'profiles']
+                            && request.resource.data.size() <= 20;
+      allow delete: if col in ['quests', 'logs', 'cheers', 'posts', 'likes', 'profiles'];
+    }
+    // A finish is written once and never changed, so each finished quest sends one Chat message.
+    match /finishes/{id} {
+      allow create: if request.resource.data.keys().hasOnly(['quest', 'person', 'name', 'title', 'cat', 'at', 'date']);
+    }
+  }
+}
