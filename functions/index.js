@@ -66,7 +66,7 @@ exports.chatNewPost = onDocumentCreated(
   async (event) => {
     const p = event.data.data();
     const widgets = [];
-    if (p.kind === "image" && p.url) widgets.push({ image: { imageUrl: p.url, altText: p.caption || "Wall post" } });
+    if (p.kind === "image" && p.url) widgets.push({ image: { imageUrl: p.url, altText: `Photo from ${p.name}` } });
     if (p.caption) widgets.push({ textParagraph: { text: p.caption } });
     if (p.quest) {
       const q = await db.doc(`quests/${p.quest}`).get();
