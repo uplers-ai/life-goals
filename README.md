@@ -48,4 +48,5 @@ The repo is public, so the code and the team roster are visible. The data stays 
 - **The roster and season dates** are at the top of the script in `index.html` (`ROSTER`, `SEASON_START`, `SEASON_END`). The season dates are repeated in `functions/index.js`, so change both together.
 - **Finishes** are written once, the first time a quest reaches 100%, and that write is what sends the Chat message. Firestore rules stop them from being edited or deleted, so each finished quest posts only once.
 - **Weekly quests** finish at target in 7 of the 8 weeks. `FINISH_WEEKS` in `index.html` sets this.
+- **New-quest celebration GIFs** live in `gifs/` (one per category) and are served by GitHub Pages. Regenerate them with `python3 tools/make_gifs.py`; the pep-talk lines are in `PEP` in `functions/index.js`.
 - **Logs and errors** for the functions are in Firebase console → Functions → Logs.

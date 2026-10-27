@@ -49,15 +49,38 @@ function istWeekday(d) {
   return new Intl.DateTimeFormat("en-GB", { timeZone: TZ, weekday: "short" }).format(d);
 }
 
+function esc(s) {
+  return String(s || "").replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" })[c]);
+}
+
+// One line is picked at random for each new quest.
+const PEP = [
+  "Most people keep their goals in their head. You put yours on a board with your name on it.",
+  "The hardest step is the first one, and you just took it.",
+  "Sixty days from now you'll be glad you started today.",
+  "Small steps, every week. That's the whole secret.",
+  "You don't need to be great to start. You need to start to be great.",
+  "Future you just said thank you.",
+  "Motivation gets you started. Showing up every week keeps you going.",
+  "Write it down, tell your people, show up. Two out of three done already.",
+];
+
 exports.chatNewQuest = onDocumentCreated(
   { document: "quests/{id}", secrets: [CHAT_WEBHOOK_URL] },
   async (event) => {
     const q = event.data.data();
-    const lines = [`🎯 *${q.name}* added a ${CATS[q.cat] || ""} quest: *${q.title}*`];
-    if (q.why) lines.push(`_${q.why}_`);
-    lines.push(measure(q));
-    lines.push(boardLink("board", "Cheer them on"));
-    await postToChat({ text: lines.join("\n") });
+    const cat = CATS[q.cat] ? q.cat : "health";
+    const widgets = [
+      { image: { imageUrl: `${BOARD_URL.value()}gifs/${cat}.gif`, altText: "Top 1%" } },
+      { decoratedText: { topLabel: `${CATS[cat]} quest · ${measure(q)}`, text: `<b>${esc(q.title)}</b>`, wrapText: true } },
+    ];
+    if (q.why) widgets.push({ textParagraph: { text: `<i>“${esc(q.why)}”</i>` } });
+    widgets.push({ textParagraph: { text: PEP[Math.floor(Math.random() * PEP.length)] } });
+    widgets.push({ buttonList: { buttons: [{ text: `Cheer ${q.name.split(" ")[0]} on`, onClick: { openLink: { url: `${BOARD_URL.value()}#board` } } }] } });
+    await postToChat({
+      text: `🎉 Congratulations *${q.name}*, you're in the top 1%: the people who write their goals down and commit to them.`,
+      cardsV2: [{ cardId: `quest-${event.params.id}`, card: { sections: [{ widgets }] } }],
+    });
   }
 );
 
